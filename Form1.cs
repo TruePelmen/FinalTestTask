@@ -32,22 +32,22 @@ namespace FinalTestTask
             if (UpWall1.Location.X <= -100)
             {
                 Random rand = new Random();
-                int randnumber = rand.Next(UpWall2.Left + 500, 1500);
+                int randnumber = rand.Next(UpWall2.Left + 500, 1700);
                 UpWall1.Left = randnumber;
                 DownWall1.Left = randnumber;             
-                int y2 = rand.Next(270, 300);
-                int y1 = rand.Next(-100, y2-350);
+                int y2 = rand.Next(270, 335);
+                int y1 = rand.Next(-100, -30);
                 UpWall1.Top = y1;
                 DownWall1.Top = y2;
             }
             if (UpWall2.Location.X <= -100)
             {
                 Random rand = new Random();
-                int randnumber = rand.Next(UpWall1.Left+500, 1500);
+                int randnumber = rand.Next(UpWall1.Left+500, 1700);
                 UpWall2.Left += randnumber;
                 DownWall2.Left += randnumber;               
-                int y2 = rand.Next(270, 300);
-                int y1 = rand.Next(-100, y2 - 350);
+                int y2 = rand.Next(270, 335);
+                int y1 = rand.Next(-100, -30);
                 UpWall2.Top = y1;
                 DownWall2.Top = y2;
             }
@@ -67,13 +67,15 @@ namespace FinalTestTask
         }
         private void BirdIsOutOfBorder()
         {
-            if(Bird.Location.Y >= 500)
+            if(Bird.Location.Y >= 500 || Bird.Location.Y <= -20)
             {              
                 Defeat();
             }
         }
         private void PlayButton_Click(object sender, EventArgs e)
         {
+            //SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\mixkit-to-the-next-round-1047.wav");
+            //simpleSound.Play();
             score = 0;
             Score.Text = $"Score: {score}";
             Score.Visible = true;
