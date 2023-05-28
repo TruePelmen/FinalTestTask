@@ -54,8 +54,8 @@ namespace FinalTestTask
         }
         private void Defeat()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\mixkit-boxer-getting-hit-2055.wav");
-            simpleSound.Play();
+            //SoundPlayer simpleSound = new SoundPlayer("../../Resources/death.wav");//@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\mixkit-boxer-getting-hit-2055.wav"
+            //simpleSound.Play();
             LostLabel.Visible = true;
             PlayButton.Text = "Replay";
             JumpButton.Enabled = false;
@@ -122,8 +122,8 @@ namespace FinalTestTask
         private void JumpButton_Click(object sender, EventArgs e)
         {
             gravityValue = -15;
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\mixkit-explainer-video-game-alert-sweep-236.wav");
-            simpleSound.Play();
+            //SoundPlayer simpleSound = new SoundPlayer("../../Resources/fly.wav"); //
+            //simpleSound.Play();
         }
         private void Collision(PictureBox a)
         {
