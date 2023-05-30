@@ -41,6 +41,12 @@ namespace FinalTestTask
             this.JumpButton = new System.Windows.Forms.Button();
             this.LostLabel = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
+            this.TextBox = new System.Windows.Forms.TextBox();
+            this.EnterYourNameLabel = new System.Windows.Forms.Label();
+            this.ResultsButton = new System.Windows.Forms.Button();
+            this.listViewResults = new System.Windows.Forms.ListView();
+            this.Players = new System.Windows.Forms.ColumnHeader();
+            this.ScoreHeader = new System.Windows.Forms.ColumnHeader();
             ((System.ComponentModel.ISupportInitialize)(this.Bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpWall2)).BeginInit();
@@ -160,6 +166,59 @@ namespace FinalTestTask
             this.Score.Text = "Score: 0";
             this.Score.Visible = false;
             // 
+            // TextBox
+            // 
+            this.TextBox.Location = new System.Drawing.Point(357, 120);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.Size = new System.Drawing.Size(125, 27);
+            this.TextBox.TabIndex = 11;
+            // 
+            // EnterYourNameLabel
+            // 
+            this.EnterYourNameLabel.AutoSize = true;
+            this.EnterYourNameLabel.BackColor = System.Drawing.Color.PaleGreen;
+            this.EnterYourNameLabel.Font = new System.Drawing.Font("Arial Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EnterYourNameLabel.Location = new System.Drawing.Point(305, 85);
+            this.EnterYourNameLabel.Name = "EnterYourNameLabel";
+            this.EnterYourNameLabel.Size = new System.Drawing.Size(219, 32);
+            this.EnterYourNameLabel.TabIndex = 12;
+            this.EnterYourNameLabel.Text = "Enter your name";
+            // 
+            // ResultsButton
+            // 
+            this.ResultsButton.Location = new System.Drawing.Point(12, 363);
+            this.ResultsButton.Name = "ResultsButton";
+            this.ResultsButton.Size = new System.Drawing.Size(116, 58);
+            this.ResultsButton.TabIndex = 13;
+            this.ResultsButton.Text = "Show all results";
+            this.ResultsButton.UseVisualStyleBackColor = true;
+            this.ResultsButton.Click += new System.EventHandler(this.ResultsButton_Click);
+            // 
+            // listViewResults
+            // 
+            this.listViewResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Players,
+            this.ScoreHeader});
+            this.listViewResults.Enabled = false;
+            this.listViewResults.HideSelection = false;
+            this.listViewResults.Location = new System.Drawing.Point(241, 47);
+            this.listViewResults.Name = "listViewResults";
+            this.listViewResults.Size = new System.Drawing.Size(379, 310);
+            this.listViewResults.TabIndex = 14;
+            this.listViewResults.UseCompatibleStateImageBehavior = false;
+            this.listViewResults.View = System.Windows.Forms.View.Details;
+            this.listViewResults.Visible = false;
+            // 
+            // Players
+            // 
+            this.Players.Text = "Players";
+            this.Players.Width = 200;
+            // 
+            // ScoreHeader
+            // 
+            this.ScoreHeader.Text = "Score";
+            this.ScoreHeader.Width = 200;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -167,15 +226,19 @@ namespace FinalTestTask
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::FinalTestTask.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ResultsButton);
+            this.Controls.Add(this.JumpButton);
+            this.Controls.Add(this.EnterYourNameLabel);
+            this.Controls.Add(this.TextBox);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.LostLabel);
-            this.Controls.Add(this.JumpButton);
-            this.Controls.Add(this.DownWall2);
-            this.Controls.Add(this.DownWall1);
-            this.Controls.Add(this.UpWall2);
             this.Controls.Add(this.PlayButton);
             this.Controls.Add(this.Bird);
+            this.Controls.Add(this.listViewResults);
             this.Controls.Add(this.UpWall1);
+            this.Controls.Add(this.DownWall1);
+            this.Controls.Add(this.UpWall2);
+            this.Controls.Add(this.DownWall2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -203,6 +266,12 @@ namespace FinalTestTask
         private System.Windows.Forms.Button JumpButton;
         private System.Windows.Forms.Label LostLabel;
         private System.Windows.Forms.Label Score;
+        private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Label EnterYourNameLabel;
+        private System.Windows.Forms.Button ResultsButton;
+        private System.Windows.Forms.ListView listViewResults;
+        private System.Windows.Forms.ColumnHeader Players;
+        private System.Windows.Forms.ColumnHeader ScoreHeader;
     }
 }
 
