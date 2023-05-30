@@ -1,13 +1,22 @@
-TruePelmen : 1
-TruePelmen : 1
-TruePelmen : 1
-TruePelmen : 3
-TruePelmen : 1
-TruePelmen : 1
-TruePelmen : 1
-RAPTOR330 : 7
-Liuta mylytsia : 7
-RAPTOR330 : 12
-QWERTY123 : 5
-ABCD : 0
-TRUEPELMEN : 1
+TruePelmen:1
+TruePelmen:1
+TruePelmen:1
+TruePelmen:3
+TruePelmen:1
+TruePelmen:1
+TruePelmen:1
+RAPTOR330:7
+Liuta mylytsia:7
+RAPTOR330:12
+QWERTY123:5
+ABCD:0
+TRUEPELMEN:1
+NoName:2
+Yura:5
+Yura:0
+Yura:1
+Yura:2
+hjk:2
+adsfgf:0
+sfgdhf:0
+adsfdgh:0

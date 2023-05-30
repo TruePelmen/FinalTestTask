@@ -14,7 +14,7 @@ namespace FinalTestTask
         { get; set; }
         public string Tostring()
         {
-            return $"{Name} : {Score}";
+            return $"{Name}:{Score}";
         }
         public int CompareTo(Player p)
         {

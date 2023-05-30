@@ -236,11 +236,23 @@ namespace FinalTestTask
                 EnterYourNameLabel.Visible = true;
                 listViewResults.Visible = false;
                 listViewResults.Enabled = false;
-                LostLabel.Visible = true;
+                LostLabel.Visible = false;
             }
             else
             {
                 throw new ArgumentException("ResultButtonBug");
+            }
+        }
+
+        private void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                //if(TextBox.Text.Contains('\n'))
+                //{
+                //    TextBox.Text.Remove('\n');
+                //}
+
             }
         }
     }

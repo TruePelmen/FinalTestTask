@@ -172,6 +172,7 @@ namespace FinalTestTask
             this.TextBox.Name = "TextBox";
             this.TextBox.Size = new System.Drawing.Size(125, 27);
             this.TextBox.TabIndex = 11;
+            this.TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_KeyPress);
             // 
             // EnterYourNameLabel
             // 
