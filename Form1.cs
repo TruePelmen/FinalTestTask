@@ -55,8 +55,8 @@ namespace FinalTestTask
         }
         private void Defeat()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\death.wav");
-            simpleSound.Play();
+            //SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\death.wav");
+            //simpleSound.Play();
             SavingResults();
             EnterYourNameLabel.Visible = true;
             TextBox.Visible = true;
@@ -139,8 +139,8 @@ namespace FinalTestTask
         private void JumpButton_Click(object sender, EventArgs e)
         {
             gravityValue = -15;
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\fly.wav"); //
-            simpleSound.Play();
+            //SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\fly.wav"); //
+            //simpleSound.Play();
         }
         private void Collision(PictureBox a)
         {
