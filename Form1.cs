@@ -55,8 +55,8 @@ namespace FinalTestTask
         }
         private void Defeat()
         {
-            //SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\death.wav");
-            //simpleSound.Play();
+            SoundPlayer simpleSound = new SoundPlayer("../../../Resources/death.wav");//../../../Resources/@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\"
+            simpleSound.Play();
             SavingResults();
             EnterYourNameLabel.Visible = true;
             TextBox.Visible = true;
@@ -139,8 +139,8 @@ namespace FinalTestTask
         private void JumpButton_Click(object sender, EventArgs e)
         {
             gravityValue = -15;
-            //SoundPlayer simpleSound = new SoundPlayer(@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\fly.wav"); //
-            //simpleSound.Play();
+            SoundPlayer simpleSound = new SoundPlayer("../../../Resources/fly.wav"); //@"c:\University\Programming\2 курс\term2\FinalTestTask\Resources\fly.wav"
+            simpleSound.Play();
         }
         private void Collision(PictureBox a)
         {
@@ -155,7 +155,7 @@ namespace FinalTestTask
         private void SavingResults()
         {
             Player p = new Player(TextBox.Text, score);
-            using (StreamWriter writer = new StreamWriter(@"C:\University\Programming\2 курс\term2\FinalTestTask\Results.txt", true))
+            using (StreamWriter writer = new StreamWriter("../../../Results.txt", true))
             {
                 // Записуємо дані у файл
                 writer.WriteLine(p.Tostring());
@@ -188,7 +188,7 @@ namespace FinalTestTask
                 List<Player> players = new List<Player>();
 
                 
-                using (StreamReader reader = new StreamReader(@"C:\University\Programming\2 курс\term2\FinalTestTask\Results.txt"))
+                using (StreamReader reader = new StreamReader("../../../Results.txt"))
                 {
                     string line;
                     while ((line = reader.ReadLine()) != null)
